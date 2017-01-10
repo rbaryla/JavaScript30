@@ -9,6 +9,9 @@ controls.forEach((element) => {
     element.addEventListener('input', changeHandeler);
 });
 
+/**
+ * Change css variable property
+ */
 function changeHandeler() {
     const sufix = this.dataset['sizing'] || '';
     document.documentElement.style.setProperty(`--${this.name}`, this.value + sufix);
